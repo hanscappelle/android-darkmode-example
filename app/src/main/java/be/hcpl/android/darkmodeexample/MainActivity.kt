@@ -11,7 +11,7 @@ class MainActivity : Activity() {
         setContentView(R.layout.main_layout)
 
         val webView = findViewById<WebView>(R.id.webview)
-        webView.loadUrl("https://www.google.com")
+        webView.loadUrl("https://www.hcpl.be/api2/test.html")
     }
 
 

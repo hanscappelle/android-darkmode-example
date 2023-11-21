@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+            .light {
+              color: red;
+            }
+
+            .dark {
+              display: none;
+              color: lightgreen;
+            }
+
+            @media (prefers-color-scheme: dark) {
+              body {
+                background: #333;
+              }
+
+              .light {
+                display: none;
+              }
+
+              .dark {
+                display: block;
+              }
+            }
+
+    </style>
+    <title>dark mode test page</title>
+</head>
+<body>
+<h1 class="light">Sadness: Your Browser is not in dark mode and/or doesn't respect the users dark
+    choice in the OS</h1>
+<h1 class="dark">Happiness: Your Browser is in dark mode and/or respects the users dark choice in
+    the OS</h1>
+</body>
+</html>
