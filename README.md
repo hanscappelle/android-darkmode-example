@@ -28,7 +28,7 @@ Added permission to manifest so app gets internet connection.
 
 In xml layout added a `WebView` and loaded an example URL (see web folder for example HTML).
 
-## Supporint vs Forcing Dark mode
+## Support vs Force Dark mode
 
 Info on how to support dark mode can be found on link below. Comes down to having a `DayNight` theme.
 https://developer.android.com/develop/ui/views/theming/darktheme#support-dark-theme
