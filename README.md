@@ -1,7 +1,7 @@
 ## About this app
 
 Simple example app to experiment with dark mode theme in app vs system setting including
-webviews using `@media (prefers-color-scheme: dark)` selector.
+`WebView` using `@media (prefers-color-scheme: dark)` selector.
 
 ## Dark mode using Material design
 
