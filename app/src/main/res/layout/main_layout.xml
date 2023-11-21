@@ -1,18 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/top_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        />
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/option_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option_theme_light"
+        app:layout_constraintTop_toBottomOf="@id/top_text" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/option_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option_theme_dark"
+        app:layout_constraintTop_toBottomOf="@id/option_light" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/option_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option_theme_system"
+        app:layout_constraintTop_toBottomOf="@id/option_dark" />
 
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option_system" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
