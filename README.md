@@ -25,5 +25,13 @@ Added permission to manifest so app get internet permission
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
+## dark mode
 
+Info on how to support dark mode 
+https://developer.android.com/develop/ui/views/theming/darktheme#support-dark-theme
 
+let the user switch
+https://developer.android.com/develop/ui/views/theming/darktheme#change-themes
+
+Info on how to force dark mode
+https://developer.android.com/develop/ui/views/theming/darktheme
