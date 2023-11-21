@@ -26,7 +26,7 @@ Added permission to manifest so app gets internet connection.
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-In xml layout added a `WebView` and loaded an example URL (see web folder for example HTML).
+In xml layout added a `WebView` and loaded an example URL (see webapp folder for example HTML).
 
 ## Support vs Force Dark mode
 
@@ -54,3 +54,23 @@ https://developer.android.com/develop/ui/views/theming/darktheme#force-dark
 
 Specific web content info:
 https://developer.android.com/develop/ui/views/theming/darktheme#web-content
+
+## WebApp Content
+
+Contents of `webapp` folder is an angular example project showing how darkmode can be implemented
+for the web. Firebase hosting is used to also publish it at:
+
+https://darkmode-example.web.app
+
+If you make changes you could always update the app or host it locally using `ng serve`. Note that
+an android emulator refers to `10.0.2.2` as the localhost so it would be available at `10.0.2.2:4200` 
+by default.
+
+Publishing to hosting can be done with (needs your `firebase init` setup to work):
+
+```
+`ng build --aot`
+
+`firebase deploy -m "commit message" --only hosting`
+
+```

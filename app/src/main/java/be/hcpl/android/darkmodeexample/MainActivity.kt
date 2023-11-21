@@ -18,8 +18,8 @@ class MainActivity : Activity() {
         setContentView(R.layout.main_layout)
 
         val webView = findViewById<WebView>(R.id.webview)
-        // TODO host elsewhere so it remains active => firebase
-        webView.loadUrl("https://www.hcpl.be/api2/test.html") // see web/test.html in project
+        webView.settings.javaScriptEnabled = true // only because using angular example app
+        webView.loadUrl("https://darkmode-example.web.app") // see webapp/index.html in project
 
         val light = findViewById<SwitchMaterial>(R.id.option_light)
         val dark = findViewById<SwitchMaterial>(R.id.option_dark)
