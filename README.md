@@ -51,3 +51,6 @@ https://developer.android.com/develop/ui/views/theming/darktheme#change-themes
 
 Info on how to force dark mode if you don't want to extend the `DayNight` theme:
 https://developer.android.com/develop/ui/views/theming/darktheme#force-dark
+
+Specific web content info:
+https://developer.android.com/develop/ui/views/theming/darktheme#web-content
