@@ -3,6 +3,8 @@
 Simple example app to experiment with dark mode theme in app vs system setting including
 `WebView` using `@media (prefers-color-scheme: dark)` selector.
 
+![screenshot of app](release/Screenshot_20231122_010234.png)
+
 ## Dark mode using Material design
 
 Info available from https://m2.material.io/develop/android/theming/dark
