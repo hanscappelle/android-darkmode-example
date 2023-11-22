@@ -33,12 +33,16 @@ In xml layout added a `WebView` and loaded an example URL (see webapp folder for
 Info on how to support dark mode can be found on link below. Comes down to having a `DayNight` theme.
 https://developer.android.com/develop/ui/views/theming/darktheme#support-dark-theme
 
+```
+<style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+```
+
 Letting the user switch theme can be done (without having to restart the app) by simply calling the
 right version, see link: 
 https://developer.android.com/develop/ui/views/theming/darktheme#change-themes
 
 ```
-@RequiresApi(Build.VERSION_CODES.S)
+    @RequiresApi(Build.VERSION_CODES.S)
     private fun forceModeNew(mode: DarkMode) {
         val uiManager = getSystemService(UI_MODE_SERVICE) as UiModeManager
         when (mode) {
@@ -49,8 +53,14 @@ https://developer.android.com/develop/ui/views/theming/darktheme#change-themes
     }
 ```
 
-Info on how to force dark mode if you don't want to extend the `DayNight` theme:
+For older API levels there is code in the project also, it uses `AppCompatDelegate.setDefaultNightMode`
+instead of `UiModeManager`. Also the `DarkMode` enum I've create in this app is completely 
+optional and only added to manage difference between both API levels. 
+
+Info on how to force dark mode if you don't want to extend from a `DayNight` theme:
 https://developer.android.com/develop/ui/views/theming/darktheme#force-dark
+
+TODO: create a branch with that example also
 
 Specific web content info:
 https://developer.android.com/develop/ui/views/theming/darktheme#web-content
